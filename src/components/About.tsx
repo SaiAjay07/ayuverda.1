@@ -14,7 +14,7 @@ const About = () => {
             <div className="relative">
               <img 
                 src="https://images.pexels.com/photos/5240677/pexels-photo-5240677.jpeg" 
-                alt="Dr. L. Haresh in consultation" 
+                alt="Ayurvedic consultation" 
                 className="rounded-lg shadow-xl w-full object-cover"
               />
               <div className="absolute -bottom-6 -right-6 bg-amber-100 p-6 rounded-lg shadow-lg max-w-xs hidden md:block">
