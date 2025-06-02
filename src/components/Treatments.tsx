@@ -18,7 +18,7 @@ const treatments = [
     title: 'Respiratory Ailments',
     sanskrit: 'Shwasa Roga',
     description: 'Natural therapies for asthma, bronchitis, sinusitis, and related conditions.',
-    image: 'https://images.pexels.com/photos/4021779/pexels-photo-4021779.jpeg',
+    image: 'https://images.pexels.com/photos/3094230/pexels-photo-3094230.jpeg',
     color: 'bg-teal-50',
     borderColor: 'border-teal-200',
     iconColor: 'text-teal-600'
