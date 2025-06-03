@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Leaf } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +23,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <a href="#" className="flex items-center">
-            <Leaf className="h-8 w-8 text-green-700" />
+            <img 
+              src="/APK LOGO-01.jpg" 
+              alt="Ayurvaidik Parishkar Kendra Logo" 
+              className="h-12 w-12 object-contain"
+            />
             <span className="ml-2 text-xl font-serif font-semibold text-green-800">
               Ayurvaidik Parishkar Kendra
             </span>
