@@ -4,28 +4,36 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Vata colors (air/space)
+        primary: {
+          beige: '#E8D8C3',
+          gold: '#D4A62F',
+          green: '#6C8C45',
+          brown: '#8E5E3A'
+        },
+        accent: {
+          leaf: '#9BBF75',
+          wood: '#6B3F2D',
+        },
+        // Preserve existing dosha colors
         vata: {
-          light: '#E6E6FA', // Lavender
-          DEFAULT: '#9370DB', // Medium Purple
-          dark: '#483D8B', // Dark Slate Blue
+          light: '#E6E6FA',
+          DEFAULT: '#9370DB',
+          dark: '#483D8B',
         },
-        // Pitta colors (fire/water)
         pitta: {
-          light: '#FFF0DB', // Light Peach
-          DEFAULT: '#FF7F50', // Coral
-          dark: '#B22222', // Firebrick
+          light: '#FFF0DB',
+          DEFAULT: '#FF7F50',
+          dark: '#B22222',
         },
-        // Kapha colors (earth/water)
         kapha: {
-          light: '#E8F5E9', // Light Green
-          DEFAULT: '#4CAF50', // Green
-          dark: '#1B5E20', // Dark Green
+          light: '#E8F5E9',
+          DEFAULT: '#4CAF50',
+          dark: '#1B5E20',
         },
       },
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
+        sans: ['Lato', 'sans-serif'],
+        serif: ['Tiro Devanagari Sanskrit', 'Playfair Display', 'serif'],
       },
     },
   },
