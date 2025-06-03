@@ -6,7 +6,7 @@ const Hero = () => {
       id="home" 
       className="relative min-h-screen flex items-center justify-center bg-cover bg-center"
       style={{ 
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/4021779/pexels-photo-4021779.jpeg")' 
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/new commit chnages/welcome page.jpeg")' 
       }}
     >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-green-900/40"></div>

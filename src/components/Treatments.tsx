@@ -8,7 +8,7 @@ const treatments = [
     title: 'Musculoskeletal Disorders',
     sanskrit: 'Asthi-Sandhi Vikara',
     description: 'Relief for neck and back pain, arthritis, gout, sciatica, and cervical spondylosis.',
-    image: 'https://images.pexels.com/photos/8325861/pexels-photo-8325861.jpeg',
+    image: '/new commit chnages/muscloskeletal.jpg',
     color: 'bg-amber-50',
     borderColor: 'border-amber-200',
     iconColor: 'text-amber-600'
@@ -18,7 +18,7 @@ const treatments = [
     title: 'Respiratory Ailments',
     sanskrit: 'Shwasa Roga',
     description: 'Natural therapies for asthma, bronchitis, sinusitis, and related conditions.',
-    image: 'https://images.pexels.com/photos/3094230/pexels-photo-3094230.jpeg',
+    image: '/new commit chnages/respiratory .jpg',
     color: 'bg-teal-50',
     borderColor: 'border-teal-200',
     iconColor: 'text-teal-600'
@@ -28,7 +28,7 @@ const treatments = [
     title: 'Digestive Disorders',
     sanskrit: 'Annavaha Srotas',
     description: 'Solutions for gastric discomfort, IBS, constipation, and more.',
-    image: 'https://images.pexels.com/photos/8355367/pexels-photo-8355367.jpeg',
+    image: '/new commit chnages/digestive dissorde.jpg',
     color: 'bg-green-50',
     borderColor: 'border-green-200',
     iconColor: 'text-green-600'
@@ -38,7 +38,7 @@ const treatments = [
     title: 'Women\'s Health',
     sanskrit: 'Stri Roga',
     description: 'Care for menstrual irregularities, menopausal symptoms, and leucorrhoea.',
-    image: 'https://images.pexels.com/photos/3373716/pexels-photo-3373716.jpeg',
+    image: '/new commit chnages/womens health.jpg',
     color: 'bg-rose-50',
     borderColor: 'border-rose-200',
     iconColor: 'text-rose-600'
@@ -48,7 +48,7 @@ const treatments = [
     title: 'Skin Conditions',
     sanskrit: 'Twak Vikara',
     description: 'Treatments for psoriasis, eczema, urticaria (hives), and other chronic dermatological issues.',
-    image: 'https://images.pexels.com/photos/5240754/pexels-photo-5240754.jpeg',
+    image: '/new commit chnages/skin conditionds.jpg',
     color: 'bg-orange-50',
     borderColor: 'border-orange-200',
     iconColor: 'text-orange-600'
@@ -58,7 +58,7 @@ const treatments = [
     title: 'Neurological Concerns',
     sanskrit: 'Vatavyadhi',
     description: 'Support for migraines, headaches, paralysis, and neuropathies.',
-    image: 'https://images.pexels.com/photos/7089401/pexels-photo-7089401.jpeg',
+    image: '/new commit chnages/shirodhara(neuro).jpg',
     color: 'bg-purple-50',
     borderColor: 'border-purple-200',
     iconColor: 'text-purple-600'
@@ -68,7 +68,7 @@ const treatments = [
     title: 'Metabolic & Lifestyle Conditions',
     sanskrit: 'Prameha',
     description: 'Management of diabetes, obesity, and hypertension through Ayurvedic wisdom.',
-    image: 'https://images.pexels.com/photos/7298684/pexels-photo-7298684.jpeg',
+    image: '/new commit chnages/welcome page.jpeg',
     color: 'bg-blue-50',
     borderColor: 'border-blue-200',
     iconColor: 'text-blue-600'
