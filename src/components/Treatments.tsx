@@ -22,7 +22,8 @@ const treatments = [
     image: '/new commit chnages/respiratory .jpg',
     color: 'bg-teal-50',
     borderColor: 'border-teal-200',
-    iconColor: 'text-teal-600'
+    iconColor: 'text-teal-600',
+    path: '/treatments/respiratory'
   },
   {
     id: 3,

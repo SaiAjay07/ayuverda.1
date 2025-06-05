@@ -8,6 +8,7 @@ import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Musculoskeletal from './components/TreatmentDetails/Musculoskeletal';
+import Respiratory from './components/TreatmentDetails/Respiratory';
 
 function App() {
   return (
@@ -25,11 +26,10 @@ function App() {
             </main>
           } />
           <Route path="/treatments/musculoskeletal" element={<Musculoskeletal />} />
+          <Route path="/treatments/respiratory" element={<Respiratory />} />
         </Routes>
         <Footer />
       </div>
     </Router>
   );
 }
-
-export default App;
