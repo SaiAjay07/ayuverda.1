@@ -11,7 +11,8 @@ const treatments = [
     image: '/new commit chnages/muscloskeletal.jpg',
     color: 'bg-amber-50',
     borderColor: 'border-amber-200',
-    iconColor: 'text-amber-600'
+    iconColor: 'text-amber-600',
+    path: '/treatments/musculoskeletal'
   },
   {
     id: 2,
@@ -35,7 +36,7 @@ const treatments = [
   },
   {
     id: 4,
-    title: 'Women\'s Health',
+    title: "Women's Health",
     sanskrit: 'Stri Roga',
     description: 'Care for menstrual irregularities, menopausal symptoms, and leucorrhoea.',
     image: '/new commit chnages/womens health.jpg',

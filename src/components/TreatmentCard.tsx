@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 interface Treatment {
   id: number;
@@ -9,6 +10,7 @@ interface Treatment {
   color: string;
   borderColor: string;
   iconColor: string;
+  path?: string;
 }
 
 interface Props {
@@ -16,9 +18,18 @@ interface Props {
 }
 
 const TreatmentCard: React.FC<Props> = ({ treatment }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (treatment.path) {
+      navigate(treatment.path);
+    }
+  };
+
   return (
     <div 
-      className={`group rounded-xl overflow-hidden shadow-lg border ${treatment.borderColor} ${treatment.color} transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}
+      className={`group rounded-xl overflow-hidden shadow-lg border ${treatment.borderColor} ${treatment.color} transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer`}
+      onClick={handleClick}
     >
       <div className="relative h-48 overflow-hidden">
         <img 
@@ -37,18 +48,17 @@ const TreatmentCard: React.FC<Props> = ({ treatment }) => {
         
         <p className="text-gray-700 mb-6">{treatment.description}</p>
         
-        <a 
-          href="#contact" 
+        <span 
           className={`inline-flex items-center text-sm font-medium ${treatment.iconColor} hover:underline`}
         >
           Learn more
           <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
           </svg>
-        </a>
+        </span>
       </div>
     </div>
   );
 };
 
-export default TreatmentCard;
+export default TreatmentCard
