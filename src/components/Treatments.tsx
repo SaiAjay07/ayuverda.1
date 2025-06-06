@@ -79,12 +79,12 @@ const treatments = [
 
 const Treatments = () => {
   return (
-    <section id="treatments" className="py-20 bg-gradient-to-b from-stone-100 to-white">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="mb-16 text-center">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-green-800 mb-4">Our Areas of Specialization</h2>
+    <section id="treatments" className="py-16 md:py-20 bg-gradient-to-b from-stone-100 to-white">
+      <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+        <div className="mb-12 md:mb-16 text-center">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-green-800 mb-4">Our Areas of Specialization</h2>
           <div className="w-24 h-1 bg-amber-500 mx-auto mb-6"></div>
-          <p className="max-w-3xl mx-auto text-gray-700 text-lg">
+          <p className="max-w-3xl mx-auto text-gray-700 text-base md:text-lg">
             We provide authentic Ayurvedic treatments for a wide range of health concerns, 
             tailored to restore balance and promote holistic well-being through time-tested traditional practices.
           </p>
@@ -96,10 +96,10 @@ const Treatments = () => {
           ))}
         </div>
         
-        <div className="mt-16 text-center">
+        <div className="mt-12 md:mt-16 text-center">
           <a 
             href="#contact" 
-            className="inline-block px-8 py-3 bg-green-700 hover:bg-green-800 text-white rounded-full transition-all duration-300 transform hover:scale-105 text-lg font-semibold"
+            className="inline-block px-6 md:px-8 py-3 bg-green-700 hover:bg-green-800 text-white rounded-full transition-all duration-300 transform hover:scale-105 text-base md:text-lg font-semibold"
           >
             Book a Consultation
           </a>

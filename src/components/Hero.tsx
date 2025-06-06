@@ -4,30 +4,38 @@ const Hero = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex items-center justify-center bg-cover bg-center"
-      style={{ 
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/new commit chnages/welcome page.jpeg")' 
-      }}
+      className="relative min-h-screen flex items-center justify-center"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-900/20 to-green-900/40"></div>
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ 
+          backgroundImage: 'url("/new commit chnages/welcome page.jpeg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center center'
+        }}
+      ></div>
+      
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4 animate-fade-in">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold text-white mb-4 animate-fade-in">
           Discover the Healing Power of Ayurveda
         </h1>
-        <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto animate-fade-in-delayed">
+        <p className="text-lg md:text-xl lg:text-2xl text-white mb-8 max-w-3xl mx-auto animate-fade-in-delayed">
           Over 30 Years of Personalized Ayurvedic Care
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-delayed-more">
           <a 
             href="#treatments" 
-            className="px-8 py-3 bg-green-700 hover:bg-green-800 text-white rounded-full transition-all duration-300 transform hover:scale-105"
+            className="px-6 md:px-8 py-3 bg-green-700 hover:bg-green-800 text-white rounded-full transition-all duration-300 transform hover:scale-105 text-base md:text-lg font-semibold"
           >
             Explore Treatments
           </a>
           <a 
             href="#contact" 
-            className="px-8 py-3 bg-transparent border-2 border-white text-white hover:bg-white/20 rounded-full transition-all duration-300 transform hover:scale-105"
+            className="px-6 md:px-8 py-3 bg-transparent border-2 border-white text-white hover:bg-white/20 rounded-full transition-all duration-300 transform hover:scale-105 text-base md:text-lg font-semibold"
           >
             Book Consultation
           </a>
