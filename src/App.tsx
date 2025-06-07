@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Musculoskeletal from './components/TreatmentDetails/Musculoskeletal';
 import Respiratory from './components/TreatmentDetails/Respiratory';
+import Prakriti from './pages/Prakriti';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           } />
           <Route path="/treatments/musculoskeletal" element={<Musculoskeletal />} />
           <Route path="/treatments/respiratory" element={<Respiratory />} />
+          <Route path="/know-your-prakriti" element={<Prakriti />} />
         </Routes>
         <Footer />
       </div>
