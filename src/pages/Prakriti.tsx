@@ -472,14 +472,11 @@ const Prakriti = () => {
   if (activeGame && gameShowResult) {
     const currentQuestions = getCurrentGameQuestions();
     return (
-      <div className="min-h-screen relative overflow-hidden" style={{ 
-        backgroundImage: 'url("/new commit chnages/welcome page.jpeg")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center center'
-      }}>
+      <div className="min-h-screen bg-cover bg-center bg-no-repeat relative overflow-hidden" 
+           style={{ backgroundImage: 'url("/new commit chnages/welcome page.jpeg")' }}>
         <div className="absolute inset-0 bg-gradient-to-b from-green-900/70 via-green-800/60 to-green-900/70"></div>
         
-        <div className="relative z-10 min-h-screen flex items-center justify-center p-4">
+        <div className="relative z-10 min-h-screen flex items-center justify-center p-4 pt-24">
           <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 max-w-4xl w-full shadow-2xl">
             <div className="text-center mb-8">
               <div className="text-6xl mb-4 animate-bounce">🏆</div>
@@ -544,11 +541,8 @@ const Prakriti = () => {
     const currentQ = currentQuestions[gameCurrentQuestion];
     
     return (
-      <div className="min-h-screen relative overflow-hidden" style={{ 
-        backgroundImage: 'url("/new commit chnages/welcome page.jpeg")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center center'
-      }}>
+      <div className="min-h-screen bg-cover bg-center bg-no-repeat relative overflow-hidden" 
+           style={{ backgroundImage: 'url("/new commit chnages/welcome page.jpeg")' }}>
         <div className="absolute inset-0 bg-gradient-to-b from-green-900/70 via-green-800/60 to-green-900/70"></div>
         
         {/* Floating Kerala elements */}
@@ -558,7 +552,7 @@ const Prakriti = () => {
         <FloatingElement delay={3} duration={6}>🦋</FloatingElement>
         <FloatingElement delay={4} duration={4}>🐘</FloatingElement>
         
-        <div className="relative z-10 min-h-screen flex items-center justify-center p-4">
+        <div className="relative z-10 min-h-screen flex items-center justify-center p-4 pt-24">
           <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 max-w-2xl w-full shadow-2xl">
             <div className="flex justify-between items-center mb-6">
               <button
@@ -634,14 +628,11 @@ const Prakriti = () => {
     const doshaInfo = getDoshaInfo(dominantDosha);
     
     return (
-      <div className="min-h-screen relative overflow-hidden" style={{ 
-        backgroundImage: 'url("/new commit chnages/welcome page.jpeg")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center center'
-      }}>
+      <div className="min-h-screen bg-cover bg-center bg-no-repeat relative overflow-hidden" 
+           style={{ backgroundImage: 'url("/new commit chnages/welcome page.jpeg")' }}>
         <div className="absolute inset-0 bg-gradient-to-b from-green-900/70 via-green-800/60 to-green-900/70"></div>
         
-        <div className="relative z-10 min-h-screen flex items-center justify-center p-4">
+        <div className="relative z-10 min-h-screen flex items-center justify-center p-4 pt-24">
           <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 max-w-4xl w-full shadow-2xl">
             <div className="text-center mb-8">
               <div className="text-8xl mb-4 animate-bounce">{doshaInfo.icon}</div>
@@ -686,7 +677,7 @@ const Prakriti = () => {
                   Take Quiz Again
                 </button>
                 <a
-                  href="#contact"
+                  href="/#contact"
                   className="px-8 py-3 bg-amber-600 hover:bg-amber-700 text-white rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
                 >
                   Book Consultation
@@ -700,136 +691,129 @@ const Prakriti = () => {
   }
 
   // Main Prakriti quiz screen
-  if (!activeGame) {
-    return (
-      <div className="min-h-screen relative overflow-hidden" style={{ 
-        backgroundImage: 'url("/new commit chnages/welcome page.jpeg")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center center'
-      }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-green-900/70 via-green-800/60 to-green-900/70"></div>
-        
-        {/* Floating Kerala elements */}
-        <FloatingElement delay={0} duration={4}>🌴</FloatingElement>
-        <FloatingElement delay={1} duration={5}>🥥</FloatingElement>
-        <FloatingElement delay={2} duration={3}>🌺</FloatingElement>
-        <FloatingElement delay={3} duration={6}>🦋</FloatingElement>
-        <FloatingElement delay={4} duration={4}>🐘</FloatingElement>
-        <FloatingElement delay={5} duration={5}>🌿</FloatingElement>
-        
-        <div className="relative z-10 min-h-screen flex items-center justify-center p-4">
-          <div className="max-w-6xl w-full">
-            {/* Header with animated doctor and quote */}
-            <div className="text-center mb-12">
-              <div className="flex items-center justify-center mb-6">
-                <div className="text-6xl mr-6 animate-pulse">🧑‍⚕️</div>
-                <div className="text-white">
-                  <h1 className="text-4xl md:text-5xl font-bold mb-4">Discover Your Ayurvedic Constitution</h1>
-                  <p className="text-xl italic">"Know thyself and you will know the universe and the gods" - Ancient Wisdom</p>
-                </div>
+  return (
+    <div className="min-h-screen bg-cover bg-center bg-no-repeat relative overflow-hidden" 
+         style={{ backgroundImage: 'url("/new commit chnages/welcome page.jpeg")' }}>
+      <div className="absolute inset-0 bg-gradient-to-b from-green-900/70 via-green-800/60 to-green-900/70"></div>
+      
+      {/* Floating Kerala elements */}
+      <FloatingElement delay={0} duration={4}>🌴</FloatingElement>
+      <FloatingElement delay={1} duration={5}>🥥</FloatingElement>
+      <FloatingElement delay={2} duration={3}>🌺</FloatingElement>
+      <FloatingElement delay={3} duration={6}>🦋</FloatingElement>
+      <FloatingElement delay={4} duration={4}>🐘</FloatingElement>
+      <FloatingElement delay={5} duration={5}>🌿</FloatingElement>
+      
+      <div className="relative z-10 min-h-screen flex items-center justify-center p-4 pt-24">
+        <div className="max-w-6xl w-full">
+          {/* Header with animated doctor and quote */}
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center mb-6">
+              <div className="text-6xl mr-6 animate-pulse">🧑‍⚕️</div>
+              <div className="text-white">
+                <h1 className="text-4xl md:text-5xl font-bold mb-4">Discover Your Ayurvedic Constitution</h1>
+                <p className="text-xl italic">"Know thyself and you will know the universe and the gods" - Ancient Wisdom</p>
               </div>
             </div>
+          </div>
 
-            {currentQuestion < prakritiquestions.length ? (
-              // Quiz interface
-              <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl mb-8">
-                <div className="flex justify-between items-center mb-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-amber-100 px-4 py-2 rounded-full">
-                      <span className="text-amber-800 font-semibold">Karma: {karmaPoints}</span>
-                    </div>
-                    <div className="bg-green-100 px-4 py-2 rounded-full">
-                      <span className="text-green-800 font-semibold">Streak: {streak}</span>
-                    </div>
+          {currentQuestion < prakritiquestions.length ? (
+            // Quiz interface
+            <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl mb-8">
+              <div className="flex justify-between items-center mb-6">
+                <div className="flex items-center space-x-4">
+                  <div className="bg-amber-100 px-4 py-2 rounded-full">
+                    <span className="text-amber-800 font-semibold">Karma: {karmaPoints}</span>
                   </div>
-                  <div className="text-sm font-medium text-gray-600">
-                    Question {currentQuestion + 1} of {prakritiquestions.length}
+                  <div className="bg-green-100 px-4 py-2 rounded-full">
+                    <span className="text-green-800 font-semibold">Streak: {streak}</span>
                   </div>
                 </div>
-                
-                <div className="w-full bg-gray-200 rounded-full h-3 mb-8">
-                  <div 
-                    className="bg-gradient-to-r from-green-500 to-teal-500 h-3 rounded-full transition-all duration-500 relative overflow-hidden"
-                    style={{ width: `${((currentQuestion + 1) / prakritiquestions.length) * 100}%` }}
-                  >
-                    <div className="absolute inset-0 bg-white/30 animate-pulse"></div>
-                  </div>
+                <div className="text-sm font-medium text-gray-600">
+                  Question {currentQuestion + 1} of {prakritiquestions.length}
                 </div>
-                
-                <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-8 text-center">
-                  {prakritiquestions[currentQuestion].question}
-                </h2>
-                
-                <div className="grid grid-cols-1 gap-4">
-                  {prakritiquestions[currentQuestion].options.map((option, index) => (
-                    <button
-                      key={index}
-                      onClick={() => handleAnswer(option)}
-                      className="p-6 rounded-xl text-left bg-gradient-to-r from-amber-50 to-orange-50 hover:from-amber-100 hover:to-orange-100 border-2 border-amber-200 hover:border-amber-300 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
-                    >
-                      <span className="text-lg font-medium text-gray-800">{option.text}</span>
-                    </button>
-                  ))}
-                </div>
-                
-                {showFeedback && (
-                  <div className="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
-                    <div className="bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-2xl animate-bounce">
-                      <p className="text-2xl font-bold text-green-800 text-center">{feedbackMessage}</p>
-                    </div>
-                  </div>
-                )}
               </div>
-            ) : null}
+              
+              <div className="w-full bg-gray-200 rounded-full h-3 mb-8">
+                <div 
+                  className="bg-gradient-to-r from-green-500 to-teal-500 h-3 rounded-full transition-all duration-500 relative overflow-hidden"
+                  style={{ width: `${((currentQuestion + 1) / prakritiquestions.length) * 100}%` }}
+                >
+                  <div className="absolute inset-0 bg-white/30 animate-pulse"></div>
+                </div>
+              </div>
+              
+              <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-8 text-center">
+                {prakritiquestions[currentQuestion].question}
+              </h2>
+              
+              <div className="grid grid-cols-1 gap-4">
+                {prakritiquestions[currentQuestion].options.map((option, index) => (
+                  <button
+                    key={index}
+                    onClick={() => handleAnswer(option)}
+                    className="p-6 rounded-xl text-left bg-gradient-to-r from-amber-50 to-orange-50 hover:from-amber-100 hover:to-orange-100 border-2 border-amber-200 hover:border-amber-300 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                  >
+                    <span className="text-lg font-medium text-gray-800">{option.text}</span>
+                  </button>
+                ))}
+              </div>
+              
+              {showFeedback && (
+                <div className="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
+                  <div className="bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-2xl animate-bounce">
+                    <p className="text-2xl font-bold text-green-800 text-center">{feedbackMessage}</p>
+                  </div>
+                </div>
+              )}
+            </div>
+          ) : null}
 
-            {/* Mini-games section */}
-            <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl">
-              <h2 className="text-3xl font-bold text-green-800 mb-8 text-center">Ayurveda Mini-Games</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div 
-                  onClick={() => startMiniGame('herb')}
-                  className="bg-gradient-to-br from-green-400 to-green-600 p-6 rounded-2xl text-white cursor-pointer transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
-                >
-                  <div className="text-4xl mb-4">🌿</div>
-                  <h3 className="text-xl font-bold mb-2">Herb Memory Match</h3>
-                  <p className="text-sm opacity-90">Test your knowledge of Ayurvedic herbs</p>
-                </div>
-                
-                <div 
-                  onClick={() => startMiniGame('chakra')}
-                  className="bg-gradient-to-br from-purple-400 to-purple-600 p-6 rounded-2xl text-white cursor-pointer transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
-                >
-                  <div className="text-4xl mb-4">🧘‍♀️</div>
-                  <h3 className="text-xl font-bold mb-2">Chakra Balance</h3>
-                  <p className="text-sm opacity-90">Learn about the seven chakras</p>
-                </div>
-                
-                <div 
-                  onClick={() => startMiniGame('yoga')}
-                  className="bg-gradient-to-br from-blue-400 to-blue-600 p-6 rounded-2xl text-white cursor-pointer transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
-                >
-                  <div className="text-4xl mb-4">🧘‍♂️</div>
-                  <h3 className="text-xl font-bold mb-2">Yoga Pose Quiz</h3>
-                  <p className="text-sm opacity-90">Master yoga asanas and their benefits</p>
-                </div>
-                
-                <div 
-                  onClick={() => startMiniGame('mudra')}
-                  className="bg-gradient-to-br from-orange-400 to-orange-600 p-6 rounded-2xl text-white cursor-pointer transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
-                >
-                  <div className="text-4xl mb-4">✋</div>
-                  <h3 className="text-xl font-bold mb-2">Mudra Master</h3>
-                  <p className="text-sm opacity-90">Discover the power of hand gestures</p>
-                </div>
+          {/* Mini-games section */}
+          <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl">
+            <h2 className="text-3xl font-bold text-green-800 mb-8 text-center">Ayurveda Mini-Games</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div 
+                onClick={() => startMiniGame('herb')}
+                className="bg-gradient-to-br from-green-400 to-green-600 p-6 rounded-2xl text-white cursor-pointer transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+              >
+                <div className="text-4xl mb-4">🌿</div>
+                <h3 className="text-xl font-bold mb-2">Herb Memory Match</h3>
+                <p className="text-sm opacity-90">Test your knowledge of Ayurvedic herbs</p>
+              </div>
+              
+              <div 
+                onClick={() => startMiniGame('chakra')}
+                className="bg-gradient-to-br from-purple-400 to-purple-600 p-6 rounded-2xl text-white cursor-pointer transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+              >
+                <div className="text-4xl mb-4">🧘‍♀️</div>
+                <h3 className="text-xl font-bold mb-2">Chakra Balance</h3>
+                <p className="text-sm opacity-90">Learn about the seven chakras</p>
+              </div>
+              
+              <div 
+                onClick={() => startMiniGame('yoga')}
+                className="bg-gradient-to-br from-blue-400 to-blue-600 p-6 rounded-2xl text-white cursor-pointer transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+              >
+                <div className="text-4xl mb-4">🧘‍♂️</div>
+                <h3 className="text-xl font-bold mb-2">Yoga Pose Quiz</h3>
+                <p className="text-sm opacity-90">Master yoga asanas and their benefits</p>
+              </div>
+              
+              <div 
+                onClick={() => startMiniGame('mudra')}
+                className="bg-gradient-to-br from-orange-400 to-orange-600 p-6 rounded-2xl text-white cursor-pointer transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+              >
+                <div className="text-4xl mb-4">✋</div>
+                <h3 className="text-xl font-bold mb-2">Mudra Master</h3>
+                <p className="text-sm opacity-90">Discover the power of hand gestures</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    );
-  }
-
-  return null;
+    </div>
+  );
 };
 
 export default Prakriti;
