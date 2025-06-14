@@ -54,9 +54,10 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <address className="not-italic text-green-200">
-              <p className="mb-2">112 Mahatma Gandhi Rd, Kalachowki</p>
-              <p className="mb-2">Chinchpokli, Mumbai, Maharashtra 400033</p>
-              <p className="mb-2">Phone: +91 9892049692</p>
+              <p className="mb-2">1st floor, G94C+WWP BLOCK-1</p>
+              <p className="mb-2">LAKSHMI NARAYANA ESTATES</p>
+              <p className="mb-2">Miyapur, Hyderabad, Telangana 500049</p>
+              <p className="mb-2">Phone: +91-7842207799</p>
               <p>Email: ayurparishkarkendra@gmail.com</p>
             </address>
           </div>

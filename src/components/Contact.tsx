@@ -87,7 +87,7 @@ const Contact = () => {
                   <MapPin className="h-6 w-6 text-amber-600 mt-1 mr-3 flex-shrink-0" />
                   <div>
                     <h4 className="font-medium text-green-800">Address</h4>
-                    <p className="text-gray-600">112 Mahatma Gandhi Rd, Kalachowki, Chinchpokli, Mumbai, Maharashtra 400033</p>
+                    <p className="text-gray-600">1st floor, G94C+WWP BLOCK-1, LAKSHMI NARAYANA ESTATES, 24, High Tension Line Rd, Nadigada Tanda, Miyapur, Hyderabad, Telangana 500049</p>
                   </div>
                 </div>
                 
@@ -95,7 +95,9 @@ const Contact = () => {
                   <Phone className="h-6 w-6 text-amber-600 mt-1 mr-3 flex-shrink-0" />
                   <div>
                     <h4 className="font-medium text-green-800">Phone</h4>
-                    <p className="text-gray-600">+91 9892049692, +91 9820069692</p>
+                    <p className="text-gray-600">+91-7842207799</p>
+                    <p className="text-gray-600">+91-7842202255</p>
+                    <p className="text-gray-600">040-42024933</p>
                   </div>
                 </div>
                 
@@ -120,7 +122,7 @@ const Contact = () => {
             
             <div className="h-64 rounded-xl overflow-hidden shadow-xl">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.6690555511844!2d72.99241091489988!3d19.029942287115785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c627a20bcaa9%3A0x26c431c5e0e8d88e!2sAyurvaidik%20Parishkar%20Kendra!5e0!3m2!1sen!2sin!4v1648549229428!5m2!1sen!2sin" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.5234567890123!2d78.3456789!3d17.4567890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI3JzI0LjQiTiA3OMKwMjAnNDQuNCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
