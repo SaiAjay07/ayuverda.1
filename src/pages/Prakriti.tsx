@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronRight, Award, Star, Sparkles, Heart, Leaf, Brain, Hand, Eye, ArrowLeft } from 'lucide-react';
+import { ChevronRight, ChevronLeft, Award, Star, Sparkles, Heart, Leaf, Brain, Hand, Eye, ArrowLeft } from 'lucide-react';
 
 interface Question {
   id: number;
@@ -321,7 +321,6 @@ const Prakriti = () => {
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
   const [showResult, setShowResult] = useState(false);
   const [scores, setScores] = useState({ vata: 0, pitta: 0, kapha: 0 });
-  const [karmaPoints, setKarmaPoints] = useState(0);
   const [streak, setStreak] = useState(0);
   const [showFeedback, setShowFeedback] = useState(false);
   const [feedbackMessage, setFeedbackMessage] = useState('');
@@ -352,7 +351,6 @@ const Prakriti = () => {
     newScores[option.dosha as keyof typeof scores] += option.points;
     setScores(newScores);
     
-    setKarmaPoints(prev => prev + 10);
     setStreak(prev => prev + 1);
     
     // Show feedback
@@ -370,16 +368,37 @@ const Prakriti = () => {
     }, 1500);
   };
 
+  const handlePrevious = () => {
+    if (currentQuestion > 0) {
+      const prevAnswer = answers[currentQuestion - 1];
+      if (prevAnswer) {
+        const newScores = { ...scores };
+        newScores[prevAnswer as keyof typeof scores] -= 3;
+        setScores(newScores);
+        
+        const newAnswers = { ...answers };
+        delete newAnswers[currentQuestion - 1];
+        setAnswers(newAnswers);
+      }
+      setCurrentQuestion(prev => prev - 1);
+      setStreak(prev => Math.max(0, prev - 1));
+    }
+  };
+
   const getDominantDosha = () => {
     const maxScore = Math.max(scores.vata, scores.pitta, scores.kapha);
-    if (scores.vata === maxScore) return 'vata';
-    if (scores.pitta === maxScore) return 'pitta';
-    return 'kapha';
+    const dominantDoshas = [];
+    
+    if (scores.vata === maxScore) dominantDoshas.push('vata');
+    if (scores.pitta === maxScore) dominantDoshas.push('pitta');
+    if (scores.kapha === maxScore) dominantDoshas.push('kapha');
+    
+    return dominantDoshas.join('-');
   };
 
   const getDoshaInfo = (dosha: string) => {
-    const info = {
-      vata: {
+    const combinations = {
+      'vata': {
         name: 'Vata',
         element: 'Air & Space',
         description: 'You are creative, energetic, and love movement and change!',
@@ -387,7 +406,7 @@ const Prakriti = () => {
         icon: '💨',
         traits: ['Creative', 'Energetic', 'Quick-thinking', 'Adaptable']
       },
-      pitta: {
+      'pitta': {
         name: 'Pitta',
         element: 'Fire & Water',
         description: 'You are focused, determined, and have natural leadership qualities!',
@@ -395,16 +414,48 @@ const Prakriti = () => {
         icon: '🔥',
         traits: ['Focused', 'Determined', 'Intelligent', 'Goal-oriented']
       },
-      kapha: {
+      'kapha': {
         name: 'Kapha',
         element: 'Earth & Water',
         description: 'You are calm, stable, and have a nurturing, peaceful nature!',
         color: 'from-green-400 to-teal-500',
         icon: '🌍',
         traits: ['Calm', 'Stable', 'Nurturing', 'Patient']
+      },
+      'vata-pitta': {
+        name: 'Vata-Pitta',
+        element: 'Air, Space & Fire',
+        description: 'You combine creativity with focus - a dynamic and innovative nature!',
+        color: 'from-purple-400 via-pink-400 to-orange-500',
+        icon: '💨🔥',
+        traits: ['Creative', 'Focused', 'Dynamic', 'Innovative']
+      },
+      'vata-kapha': {
+        name: 'Vata-Kapha',
+        element: 'Air, Space & Earth',
+        description: 'You balance movement with stability - adaptable yet grounded!',
+        color: 'from-purple-400 via-blue-400 to-green-500',
+        icon: '💨🌍',
+        traits: ['Adaptable', 'Grounded', 'Balanced', 'Thoughtful']
+      },
+      'pitta-kapha': {
+        name: 'Pitta-Kapha',
+        element: 'Fire & Earth',
+        description: 'You combine determination with patience - strong and steady leadership!',
+        color: 'from-orange-400 via-yellow-400 to-green-500',
+        icon: '🔥🌍',
+        traits: ['Determined', 'Patient', 'Strong', 'Reliable']
+      },
+      'vata-pitta-kapha': {
+        name: 'Tridoshic (Vata-Pitta-Kapha)',
+        element: 'All Elements in Balance',
+        description: 'You are perfectly balanced with all three doshas - a rare and harmonious constitution!',
+        color: 'from-purple-400 via-orange-400 to-green-500',
+        icon: '💨🔥🌍',
+        traits: ['Balanced', 'Harmonious', 'Versatile', 'Complete']
       }
     };
-    return info[dosha as keyof typeof info];
+    return combinations[dosha as keyof typeof combinations] || combinations.vata;
   };
 
   const startMiniGame = (gameType: string) => {
@@ -632,6 +683,16 @@ const Prakriti = () => {
            style={{ backgroundImage: 'url("/new commit chnages/welcome page.jpeg")' }}>
         <div className="absolute inset-0 bg-gradient-to-b from-green-900/70 via-green-800/60 to-green-900/70"></div>
         
+        {/* Floating Kerala elements */}
+        <FloatingElement delay={0} duration={4}>🌴</FloatingElement>
+        <FloatingElement delay={1} duration={5}>🥥</FloatingElement>
+        <FloatingElement delay={2} duration={3}>🌺</FloatingElement>
+        <FloatingElement delay={3} duration={6}>🦋</FloatingElement>
+        <FloatingElement delay={4} duration={4}>🐘</FloatingElement>
+        <FloatingElement delay={5} duration={5}>🌿</FloatingElement>
+        <FloatingElement delay={6} duration={4}>🦚</FloatingElement>
+        <FloatingElement delay={7} duration={6}>🌸</FloatingElement>
+        
         <div className="relative z-10 min-h-screen flex items-center justify-center p-4 pt-24">
           <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 max-w-4xl w-full shadow-2xl">
             <div className="text-center mb-8">
@@ -645,7 +706,7 @@ const Prakriti = () => {
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 {doshaInfo.traits.map((trait, index) => (
-                  <div key={index} className="bg-green-50 p-3 rounded-lg border border-green-200">
+                  <div key={index} className="bg-green-50 p-3 rounded-lg border border-green-200 transform hover:scale-105 transition-all duration-300">
                     <span className="text-green-800 font-medium">{trait}</span>
                   </div>
                 ))}
@@ -657,14 +718,32 @@ const Prakriti = () => {
                   <div className="text-center">
                     <div className="text-2xl font-bold text-purple-600">{scores.vata}</div>
                     <div className="text-sm text-gray-600">Vata</div>
+                    <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+                      <div 
+                        className="bg-purple-600 h-2 rounded-full transition-all duration-1000"
+                        style={{ width: `${(scores.vata / 30) * 100}%` }}
+                      ></div>
+                    </div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-red-600">{scores.pitta}</div>
                     <div className="text-sm text-gray-600">Pitta</div>
+                    <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+                      <div 
+                        className="bg-red-600 h-2 rounded-full transition-all duration-1000"
+                        style={{ width: `${(scores.pitta / 30) * 100}%` }}
+                      ></div>
+                    </div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-green-600">{scores.kapha}</div>
                     <div className="text-sm text-gray-600">Kapha</div>
+                    <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+                      <div 
+                        className="bg-green-600 h-2 rounded-full transition-all duration-1000"
+                        style={{ width: `${(scores.kapha / 30) * 100}%` }}
+                      ></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -696,36 +775,37 @@ const Prakriti = () => {
          style={{ backgroundImage: 'url("/new commit chnages/welcome page.jpeg")' }}>
       <div className="absolute inset-0 bg-gradient-to-b from-green-900/70 via-green-800/60 to-green-900/70"></div>
       
-      {/* Floating Kerala elements */}
+      {/* Enhanced Floating Kerala elements */}
       <FloatingElement delay={0} duration={4}>🌴</FloatingElement>
       <FloatingElement delay={1} duration={5}>🥥</FloatingElement>
       <FloatingElement delay={2} duration={3}>🌺</FloatingElement>
       <FloatingElement delay={3} duration={6}>🦋</FloatingElement>
       <FloatingElement delay={4} duration={4}>🐘</FloatingElement>
       <FloatingElement delay={5} duration={5}>🌿</FloatingElement>
+      <FloatingElement delay={6} duration={4}>🦚</FloatingElement>
+      <FloatingElement delay={7} duration={6}>🌸</FloatingElement>
+      <FloatingElement delay={8} duration={5}>🕊️</FloatingElement>
+      <FloatingElement delay={9} duration={4}>🌾</FloatingElement>
       
       <div className="relative z-10 min-h-screen flex items-center justify-center p-4 pt-24">
         <div className="max-w-6xl w-full">
-          {/* Header with animated doctor and quote */}
+          {/* Enhanced header with animated doctor and quote */}
           <div className="text-center mb-12">
             <div className="flex items-center justify-center mb-6">
               <div className="text-6xl mr-6 animate-pulse">🧑‍⚕️</div>
               <div className="text-white">
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">Discover Your Ayurvedic Constitution</h1>
-                <p className="text-xl italic">"Know thyself and you will know the universe and the gods" - Ancient Wisdom</p>
+                <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">Discover Your Ayurvedic Constitution</h1>
+                <p className="text-xl italic animate-fade-in-delayed">"Know thyself and you will know the universe and the gods" - Ancient Wisdom</p>
               </div>
             </div>
           </div>
 
           {currentQuestion < prakritiquestions.length ? (
-            // Quiz interface
-            <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl mb-8">
+            // Enhanced quiz interface
+            <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl mb-8 animate-fade-in">
               <div className="flex justify-between items-center mb-6">
                 <div className="flex items-center space-x-4">
-                  <div className="bg-amber-100 px-4 py-2 rounded-full">
-                    <span className="text-amber-800 font-semibold">Karma: {karmaPoints}</span>
-                  </div>
-                  <div className="bg-green-100 px-4 py-2 rounded-full">
+                  <div className="bg-green-100 px-4 py-2 rounded-full animate-pulse">
                     <span className="text-green-800 font-semibold">Streak: {streak}</span>
                   </div>
                 </div>
@@ -743,20 +823,57 @@ const Prakriti = () => {
                 </div>
               </div>
               
-              <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-8 text-center">
+              <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-8 text-center animate-fade-in">
                 {prakritiquestions[currentQuestion].question}
               </h2>
               
-              <div className="grid grid-cols-1 gap-4">
+              <div className="grid grid-cols-1 gap-4 mb-6">
                 {prakritiquestions[currentQuestion].options.map((option, index) => (
                   <button
                     key={index}
                     onClick={() => handleAnswer(option)}
-                    className="p-6 rounded-xl text-left bg-gradient-to-r from-amber-50 to-orange-50 hover:from-amber-100 hover:to-orange-100 border-2 border-amber-200 hover:border-amber-300 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                    className="p-6 rounded-xl text-left bg-gradient-to-r from-amber-50 to-orange-50 hover:from-amber-100 hover:to-orange-100 border-2 border-amber-200 hover:border-amber-300 transition-all duration-300 transform hover:scale-105 hover:shadow-lg animate-fade-in"
+                    style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <span className="text-lg font-medium text-gray-800">{option.text}</span>
                   </button>
                 ))}
+              </div>
+              
+              {/* Navigation buttons */}
+              <div className="flex justify-between items-center">
+                <button
+                  onClick={handlePrevious}
+                  disabled={currentQuestion === 0}
+                  className={`flex items-center px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
+                    currentQuestion === 0
+                      ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                      : 'bg-gray-600 hover:bg-gray-700 text-white'
+                  }`}
+                >
+                  <ChevronLeft className="w-5 h-5 mr-2" />
+                  Previous
+                </button>
+                
+                <div className="text-center">
+                  <div className="text-sm text-gray-600 mb-2">Progress</div>
+                  <div className="flex space-x-2">
+                    {prakritiquestions.map((_, index) => (
+                      <div
+                        key={index}
+                        className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                          index < currentQuestion
+                            ? 'bg-green-500'
+                            : index === currentQuestion
+                            ? 'bg-amber-500 animate-pulse'
+                            : 'bg-gray-300'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="w-24"></div> {/* Spacer for alignment */}
               </div>
               
               {showFeedback && (
@@ -769,13 +886,13 @@ const Prakriti = () => {
             </div>
           ) : null}
 
-          {/* Mini-games section */}
-          <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl">
+          {/* Enhanced Mini-games section */}
+          <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl animate-fade-in">
             <h2 className="text-3xl font-bold text-green-800 mb-8 text-center">Ayurveda Mini-Games</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div 
                 onClick={() => startMiniGame('herb')}
-                className="bg-gradient-to-br from-green-400 to-green-600 p-6 rounded-2xl text-white cursor-pointer transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+                className="bg-gradient-to-br from-green-400 to-green-600 p-6 rounded-2xl text-white cursor-pointer transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-float"
               >
                 <div className="text-4xl mb-4">🌿</div>
                 <h3 className="text-xl font-bold mb-2">Herb Memory Match</h3>
@@ -784,7 +901,8 @@ const Prakriti = () => {
               
               <div 
                 onClick={() => startMiniGame('chakra')}
-                className="bg-gradient-to-br from-purple-400 to-purple-600 p-6 rounded-2xl text-white cursor-pointer transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+                className="bg-gradient-to-br from-purple-400 to-purple-600 p-6 rounded-2xl text-white cursor-pointer transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-float"
+                style={{ animationDelay: '0.5s' }}
               >
                 <div className="text-4xl mb-4">🧘‍♀️</div>
                 <h3 className="text-xl font-bold mb-2">Chakra Balance</h3>
@@ -793,7 +911,8 @@ const Prakriti = () => {
               
               <div 
                 onClick={() => startMiniGame('yoga')}
-                className="bg-gradient-to-br from-blue-400 to-blue-600 p-6 rounded-2xl text-white cursor-pointer transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+                className="bg-gradient-to-br from-blue-400 to-blue-600 p-6 rounded-2xl text-white cursor-pointer transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-float"
+                style={{ animationDelay: '1s' }}
               >
                 <div className="text-4xl mb-4">🧘‍♂️</div>
                 <h3 className="text-xl font-bold mb-2">Yoga Pose Quiz</h3>
@@ -802,7 +921,8 @@ const Prakriti = () => {
               
               <div 
                 onClick={() => startMiniGame('mudra')}
-                className="bg-gradient-to-br from-orange-400 to-orange-600 p-6 rounded-2xl text-white cursor-pointer transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+                className="bg-gradient-to-br from-orange-400 to-orange-600 p-6 rounded-2xl text-white cursor-pointer transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-float"
+                style={{ animationDelay: '1.5s' }}
               >
                 <div className="text-4xl mb-4">✋</div>
                 <h3 className="text-xl font-bold mb-2">Mudra Master</h3>
