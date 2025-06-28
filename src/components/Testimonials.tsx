@@ -30,7 +30,7 @@ const testimonials: Testimonial[] = [
     condition: "Psoriasis",
     rating: 5,
     testimonial: "I was diagnosed with psoriasis over 8 years ago. The itching, flaking, and embarrassment made it extremely hard to lead a normal life. I tried steroid creams, pills, and even light therapy — but nothing gave lasting results. Dr. Haresh patiently explained the root cause of psoriasis from an Ayurvedic point of view and prescribed a personalized treatment plan. After 2 months of consistent Panchakarma therapy and herbal medicines, my skin started clearing up. Now, 6 months later, I'm 90% clear and feel confident again!",
-    image: "https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg",
+    image: "/ravi testamonial.png",
     treatment: "Panchakarma, Herbal Medicines"
   },
   {
