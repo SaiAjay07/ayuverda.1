@@ -40,7 +40,7 @@ const testimonials: Testimonial[] = [
     condition: "Chronic Migraines",
     rating: 5,
     testimonial: "I suffered from debilitating migraines for over 10 years. The pain was so severe that I couldn't function normally. Modern medicine only provided temporary relief with side effects. At Ayurparishkar Kendra, Dr. Haresh diagnosed my condition as a Pitta imbalance and recommended Shirodhara therapy along with specific dietary changes. After just 4 sessions, my migraine frequency reduced dramatically. It's been 8 months now, and I rarely get headaches. The holistic approach here is truly remarkable!",
-    image: "https://images.pexels.com/photos/5327580/pexels-photo-5327580.jpeg",
+    image: "/testamonial of priya sharma.png",
     treatment: "Shirodhara, Dietary Counseling"
   },
   {
@@ -67,7 +67,7 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial; index: number }> = (
             <img 
               src={testimonial.image} 
               alt={testimonial.name} 
-              className="w-full h-80 object-cover rounded-xl shadow-xl"
+              className="w-full h-80 object-contain rounded-xl shadow-xl bg-white"
             />
           </div>
         </div>
