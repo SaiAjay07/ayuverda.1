@@ -50,7 +50,7 @@ const testimonials: Testimonial[] = [
     condition: "PCOD",
     rating: 5,
     testimonial: "I was struggling with PCOD for 5 years, which caused irregular periods, weight gain, and hormonal imbalances. Multiple gynecologists prescribed hormonal treatments, but the side effects were unbearable. Dr. Haresh's approach was completely different — he focused on balancing my doshas through Panchakarma, specific yoga practices, and herbal formulations. Within 4 months, my cycles became regular, I lost 12 kg naturally, and my energy levels improved significantly. I'm now planning for a healthy pregnancy!",
-    image: "https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg",
+    image: "/testimoinal meera patel.png",
     treatment: "Panchakarma, Yoga Therapy, Herbal Formulations"
   }
 ];
