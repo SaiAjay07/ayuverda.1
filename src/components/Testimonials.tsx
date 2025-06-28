@@ -20,7 +20,7 @@ const testimonials: Testimonial[] = [
     condition: "Cervical Spondylosis",
     rating: 5,
     testimonial: "I had been suffering from severe cervical spondylosis and chronic neck pain for over 5 years. After trying various allopathic treatments with only temporary relief, I decided to explore Ayurveda. Dr. Haresh took the time to understand my prakriti and the root cause of my issue. The treatment wasn't just about massage or pain relief — it was a complete, holistic approach. Within 3 weeks of Abhyanga, Nasya, and Shirovasti treatments, my pain reduced by 80%. I can now sleep peacefully and work without constant discomfort. This clinic truly changed my life!",
-    image: "https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg",
+    image: "/testomonial suman.jpg",
     treatment: "Abhyanga, Nasya, Shirovasti"
   },
   {
