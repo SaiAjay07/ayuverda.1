@@ -69,14 +69,6 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial; index: number }> = (
               alt={testimonial.name} 
               className="w-full h-80 object-cover rounded-xl shadow-xl"
             />
-            <div className="absolute -bottom-4 -right-4 bg-green-700 text-white p-4 rounded-xl shadow-lg">
-              <div className="flex items-center space-x-1">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-current text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-sm font-medium mt-1">{testimonial.rating}/5 Stars</p>
-            </div>
           </div>
         </div>
 
