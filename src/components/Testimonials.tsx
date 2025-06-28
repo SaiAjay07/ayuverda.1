@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, Quote } from 'lucide-react';
+import { Star } from 'lucide-react';
 
 interface Testimonial {
   id: number;
@@ -75,8 +75,6 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial; index: number }> = (
         {/* Content Section */}
         <div className="lg:w-2/3 w-full">
           <div className="bg-white rounded-xl p-8 shadow-xl border border-green-100 relative">
-            <Quote className="absolute top-4 left-4 w-8 h-8 text-green-200" />
-            
             <div className="mb-6">
               <h3 className="text-2xl font-bold text-green-800 mb-2">{testimonial.name}</h3>
               <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
