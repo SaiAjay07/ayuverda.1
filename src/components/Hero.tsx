@@ -18,7 +18,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-110"
         style={{ 
-          backgroundImage: 'url("/new commit chnages/welcome page.jpeg")',
+          backgroundImage: 'url("/images/welcome page.jpeg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
           transform: `translateY(${scrollY * 0.5}px) scale(1.1)`

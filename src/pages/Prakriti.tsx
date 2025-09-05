@@ -772,7 +772,7 @@ const Prakriti = () => {
   // Main Prakriti quiz screen
   return (
     <div className="min-h-screen bg-cover bg-center bg-no-repeat relative overflow-hidden" 
-         style={{ backgroundImage: 'url("/new commit chnages/welcome page.jpeg")' }}>
+         style={{ backgroundImage: 'url("/images/welcome page.jpeg")' }}>
       <div className="absolute inset-0 bg-gradient-to-b from-green-900/70 via-green-800/60 to-green-900/70"></div>
       
       {/* Enhanced Floating Kerala elements */}
