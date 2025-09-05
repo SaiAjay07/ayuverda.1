@@ -65,7 +65,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <a href="/" className="flex items-center group">
             <img 
-              src="/APK LOGO-01.jpg" 
+              src="/images/APK LOGO-01.jpg" 
               alt="Ayurvaidik Parishkar Kendra Logo" 
               className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-110"
             />

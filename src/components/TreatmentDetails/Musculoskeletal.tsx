@@ -9,7 +9,7 @@ const Musculoskeletal = () => {
           <div className="lg:w-1/2">
             <div className="relative rounded-xl overflow-hidden shadow-xl">
               <img 
-                src="/Elakizhi.png"
+                src="/images/Elakizhi.png"
                 alt="Elakizhi therapy" 
                 className="w-full h-full object-cover"
               />
