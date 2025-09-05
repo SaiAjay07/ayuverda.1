@@ -9,7 +9,7 @@ const Respiratory = () => {
           <div className="lg:w-1/2">
             <div className="relative rounded-xl overflow-hidden shadow-xl">
               <img 
-                src="/images/Nasya Treatment.png"
+                src="/Nasya Treatment.png"
                 alt="Nasya therapy" 
                 className="w-full h-full object-cover"
               />
